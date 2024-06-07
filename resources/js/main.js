@@ -1,24 +1,43 @@
 // Initialize Neutralino
 Neutralino.init();
 
-let dragRegion = document.getElementById('title-bar');
-let dragging = false;
-let startX, startY;
 
-dragRegion.addEventListener('mousedown', (event) => {
-  dragging = true;
-  startX = event.clientX;
-  startY = event.clientY;
+window.onload = function() {
+    var bigname = document.getElementById('bigname');
+    var bgColor = window.getComputedStyle(bigname, null).backgroundColor;
+
+    var rgb = bgColor.replace(/^(rgb|rgba)\(/,'').replace(/\)$/,'').replace(/\s/g,'').split(',');
+    var yiq = ((rgb[0]*299)+(rgb[1]*587)+(rgb[2]*114))/1000;
+
+    bigname.style.color = (yiq >= 128) ? 'black' : 'white';
+}
+
+document.getElementById('minimize').addEventListener('click', function() {
+    Neutralino.app.exit();
 });
 
-window.addEventListener('mousemove', (event) => {
-  if (dragging) {
-    window.moveBy(event.clientX - startX, event.clientY - startY);
-    startX = event.clientX;
-    startY = event.clientY;
-  }
-});
+document.getElementById('shutdown').addEventListener('click', function() {
+    let button = Neutralino.os.showMessageBox('Apagar',
+                            '¿Quieres apagar el sistema? Todas las apps se cerrarán y se perderán los datos no guardados.',
+                            'YES_NO', 'WARNING');
+        if(button == 'YES') {
+            Neutralino.app.exit();
+        }
+}
+);
 
-window.addEventListener('mouseup', () => {
-  dragging = false;
-});
+document.getElementById('restart').addEventListener('click', function() {
+    let button = Neutralino.os.showMessageBox('Reiniciar',
+                            '¿Quieres reiniciar el sistema? Todas las apps se cerrarán y se perderán los datos no guardados.',
+                            'YES_NO', 'WARNING');
+        if(button == 'YES') {
+            Neutralino.app.exit();
+        }
+}
+);
+
+
+document.getElementById('appshow').addEventListener('click', function() {
+     window.location.href = '/apps.html';
+}
+);
