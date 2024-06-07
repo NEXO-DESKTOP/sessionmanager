@@ -17,7 +17,6 @@
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Archivo', 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    user-select: none;
     margin: 0;
     padding: 0;
     
@@ -25,7 +24,6 @@ body{
 }
 
 h5{
-    user-select: none;
     font-weight: 700;
     font-size: 15px;
 }
@@ -33,8 +31,6 @@ h5{
     position: fixed;
     height: 60px; 
     width: 100%; 
-    -webkit-app-region: drag;
-    cursor: move;
     top: 0;
     left: 0;
     z-index: 100;
@@ -43,10 +39,10 @@ h5{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    user-select: none;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor:no-drop;
 
 }
 

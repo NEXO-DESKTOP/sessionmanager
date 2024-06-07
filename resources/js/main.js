@@ -1,3 +1,5 @@
+
+
 // Initialize Neutralino
 Neutralino.init();
 
@@ -57,3 +59,8 @@ nativaPersona.then(result => {
     console.error(error); // Esto manejará cualquier error que pueda ocurrir
 });
 
+
+
+Neutralino.events.on("focus", function() {
+    Neutralino.app.close();
+});
