@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Gestor de Sesión</title>
+  <title>Sesión de <div class="username"></div></title>
 </head>
 <body>
   <div id="title-bar">
     <button id=appshow>Aplicaciones</button>
-    <h5 id="titulox">Sesión de <div class="username">humano</div></h5>
-    <button id="minimize">Salir</button>
+    <h5 id="titulox">Sesión de <div class="username"></div></h5>
+    <div id="minimize"></div>
 
   </div>
   
@@ -21,7 +21,7 @@
     <div id="pik">
     </div>
     <h1 id="bigname">
-      Sesión de <div class="username">humano</div>
+      Sesión de <div class="username"></div>
     </h1>
 
     <div id="power-actions">
@@ -47,13 +47,15 @@ No Hay Widgets Disponibles
 </section>
 </main>
 <footer>
-  <button id="addwidget">+</button>
-  <input type="text" id="aisearch" placeholder="Escribe aquí">
-  <button id="search">Buscar</button>
-  <button id="settings">Configuración</button>
+  <button id="addwidget"><span class="symbol">+</span></button>
+  <input type="text" class="search" id="aisearch" placeholder="Escribe aquí">
+  <button id="searchbtn"><span class="symbol">search</span></button>
+  <button id="settings"><span class="symbol">settings</span></button>
 
 </footer>
 </body>
 <script src="js/neutralino.js"></script>
+<script src="js/com.js"></script>
+
 <script src="js/main.js"></script>
 </html>
