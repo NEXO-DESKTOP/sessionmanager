@@ -222,17 +222,18 @@ button:active{
     
   }
 
-  .search{
+.search{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    transform: none; /* Add this line */
 
     border: 1px solid darkgray;
     background-color: whitesmoke;
     padding: 10px 15px;
     border-radius: 12px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    cursor:auto;
     margin: 0 10px;
-    cursor: pointer;
+;
     z-index: 100;
     animation: slideInFromRight 0.3s ease-out;
 
@@ -242,7 +243,6 @@ button:active{
 }.search:hover{
     position: relative;
     padding: 10px;
-    cursor: pointer;
     transition: 0.3s;
     transform: scale(0.99);
 

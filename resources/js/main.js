@@ -60,7 +60,3 @@ nativaPersona.then(result => {
 });
 
 
-
-Neutralino.events.on("focus", function() {
-    Neutralino.app.close();
-});
