@@ -13,3 +13,5 @@ neutralino.js
 *.log
 resources/.DS_Store
 /.tmp
+.tmp/window_state.config.json
+.DS_Store
